@@ -1,3 +1,14 @@
+# MacOS Stuff
+*.DS_Store
+
+# Marrow Binary
+marrow-lang
+
+# Python venv for testing
+env/
+.pytest_cache
+__pycache__
+
 # Prerequisites
 *.d
 
