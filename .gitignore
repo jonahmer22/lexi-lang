@@ -1,8 +1,8 @@
 # MacOS Stuff
 *.DS_Store
 
-# Marrow Binary
-marrow-lang
+# Lexi Binary
+lexi-lang
 
 # Python venv for testing
 env/
