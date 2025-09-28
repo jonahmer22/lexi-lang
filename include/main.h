@@ -1,7 +1,11 @@
 #ifndef MAIN_H
 #define MAIN_H
 
-#include "../deps/ReMem/ReMem.h"
+// entirely useless for right now, might get added back later
+// #include "../deps/ReMem/ReMem.h"
+
+#include <stdint.h>
+#include <stddef.h>
 
 // i am aware that this is not an accurate name for what this is, i just can't think of a better one
 #define BITSIZE uint16_t	// it is not recomended to increase this above 16 bit, in the initial version this does not shrink or grow with size, arrays are made on the stack at the full range size of this type
@@ -45,7 +49,7 @@ typedef enum Registers{
 	REG_6,		// seventh
 	REG_7,		// eigth, the sizes of these registers and data cells in memory are determined by above macro
 	REG_SP,		// stack pointer, points to the top of the stack
-	REG_PC,		// program counter, current index in bytecode
+	REG_PC,		// program counter, current index in bytecode "NOTE" this register is still BITSIZE so program size may be limited
 	REG_ACC		// accumulator, used for arithmatic operations and as a "result" register
 } Registers;
 

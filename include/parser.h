@@ -1,12 +1,14 @@
 #ifndef PARSER_H
 #define PARSER_H
 
+#include <stddef.h>
+
 typedef enum TokenType{
-	TOKEN_OP = 0,	// first token on line unless no tokens match and followed by `:` then it's a label
+	TOKEN_OP = 0,	// first token on line
 	TOKEN_REG,	// must start with `R` or `r` followed by a number 0 - 7 or special keywords `SP`, `PC`, or `ACC`
 	TOKEN_IMMD,	// first character of token is `#` then a integer value (max size depends on vm settings)
 	TOKEN_ADDR,	// first character of token is `[` then address in hex or integer followed by `]` close
-	TOKEN_LABEL	// a string of characters not recognized as a OP followed by a `:`
+	TOKEN_LABEL	// first character of token is `@` then the label name followed by a `:`
 } TokenType;
 
 typedef struct Token{
@@ -21,5 +23,7 @@ typedef struct Token{
 	// relevant metadata
 	size_t line;
 } Token;
+
+Token *parser(char *pathToFile);
 
 #endif

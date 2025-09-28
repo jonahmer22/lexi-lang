@@ -76,12 +76,12 @@ A custom interpreted assembly language project. Includes a parser, compiler, and
     MOV R0, #5      ; start value
     MOV ACC, R0
 
-loop:
+@loop:
     DEC             ; ACC--
     JLZ done        ; if ACC < 0, jump to done
     JMP loop        ; repeat
 
-done:
+@done:
     HLT
 ```
 
