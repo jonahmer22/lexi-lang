@@ -124,7 +124,7 @@
 | 121 | 0x79 | y    | Lowercase y         |
 | 122 | 0x7A | z    | Lowercase z         |
 | 123 | 0x7B | {    | Left brace          |
-| 124 | 0x7C | \|    | Vertical bar        |
+| 124 | 0x7C | \|   | Vertical bar        |
 | 125 | 0x7D | }    | Right brace         |
 | 126 | 0x7E | ~    | Tilde               |
 | 127 | 0x7F | DEL  | Delete              |
