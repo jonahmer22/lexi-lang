@@ -8,7 +8,8 @@ typedef enum TokenType{
 	TOKEN_REG,	// must start with `R` or `r` followed by a number 0 - 7 or special keywords `SP`, `PC`, or `ACC`
 	TOKEN_IMMD,	// first character of token is `#` then a integer value (max size depends on vm settings)
 	TOKEN_ADDR,	// first character of token is `[` then address in hex or integer followed by `]` close
-	TOKEN_LABEL	// first character of token is `@` then the label name followed by a `:`
+	TOKEN_LABEL,	// first character of token is `@` then the label name followed by a `:`
+	TOKEN_END	// only for the end file, denotes end of program
 } TokenType;
 
 typedef struct Token{

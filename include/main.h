@@ -2,7 +2,7 @@
 #define MAIN_H
 
 // entirely useless for right now, might get added back later
-// #include "../deps/ReMem/ReMem.h"
+#include "../deps/ReMem/ReMem.h"
 
 #include <stdint.h>
 #include <stddef.h>
